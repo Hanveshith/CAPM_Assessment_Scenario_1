@@ -1,0 +1,81 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### ServiceDocument
+GET {{server}}/odata/v4/employee
+
+### Service Document Metadata
+GET {{server}}/odata/v4/employee/$metadata
+
+### GET EmployeeSet
+GET {{server}}/odata/v4/employee/EmployeeSet
+Authorization: Basic {{username}}:{{password}}
+
+### Employees whose name starts with ‘S’
+GET {{server}}/odata/v4/employee/EmployeeSet?$filter=startswith(nameFirst,'S')
+
+
+### Top 2 Employee order by salary
+GET {{server}}/odata/v4/employee/EmployeeSet?$top=2&orderby=salaryAmount
+
+
+### EmployeeSet CREATE with salary < 50000 and USD
+POST {{server}}/odata/v4/employee/EmployeeSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "nameFirst": "nameFirst-2553083",
+  "nameMiddle": "nameMiddle-2553083",
+  "nameLast": "nameLast-2553083",
+  "nameInitials": "nameInitials-2553083",
+  "Gender": "M",
+  "Language": "83",
+  "phoneNumber": "phoneNumber-2553083",
+  "Email": "Email-2553083",
+  "loginName": "Name-2553083",
+  "Currency": {
+    "code": "USD"
+  },
+  "salaryAmount": 3000,
+  "accountNumber": "ntNumber-2553083",
+  "bankId": "-2553083",
+  "bankName": "bankName-2553083"
+}
+
+
+### EmployeeSet Update
+PATCH {{server}}/odata/v4/employee/EmployeeSet/25530838-6a37-4214-8428-3a80e44635a2
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "nameMiddle": "nameMiddle-2553083",
+  "nameLast": "nameLast-2553083",
+  "nameInitials": "nameInitials-2553083",
+  "Gender": "M",
+  "Language": "83",
+  "phoneNumber": "phoneNumber-2553083",
+  "Email": "Email-2553083",
+  "Currency": {
+    "code": "215"
+  },
+  "salaryAmount": 30000,
+  "accountNumber": "ntNumber-2553083",
+  "bankId": "-2553083",
+  "bankName": "bankName-2553083"
+}
+
+
+### EmployeeSet
+# @name EmployeeSet_DELETE
+DELETE {{server}}/odata/v4/employee/EmployeeSet/e5028c48-5d2a-4cde-a2aa-3f51079ade49
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/employee/Currencies
+Authorization: Basic {{username}}:{{password}}
