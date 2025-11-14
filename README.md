@@ -192,14 +192,14 @@ case - 3:	CREATE an employee with salary <50000 & currency code EUR.
   "bankName": "bankName-2553083"
 }
 ```
- #### 7.    Updade Employee
+ #### 7.    Update Employee
 
 ```http
   PATCH odata/v4/employee/EmployeeSet
 ```
 |Parameters | Description                |
 |:-- | :------------------------- |
-| ID | Create Employee |
+| ID | Update Employee |
 
 #### Body 
 case - 1:	UPDATE an employee by keeping the nameFirst and loginName intact.
@@ -252,7 +252,7 @@ case - 2:	UPDATE an employee by changing the loginName.
 ```
 |Parameters | Description                |
 |:-- | :------------------------- |
-| ID | Create Employee |
+| ID | Delete Employee |
 
 
 
