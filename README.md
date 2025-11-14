@@ -6,7 +6,7 @@ Scenario-1: Creating Entity, Exposing Data and Validations
 
 #### 1. Schema and Service
 
-[Schema](https://github.com/matiassingers/awesome-readme), [Service](https://github.com/matiassingers/awesome-readme)
+[Schema](https://github.com/Hanveshith/CAPM_Assessment_Scenario_1/blob/main/db/schema.cds), [Service](https://github.com/Hanveshith/CAPM_Assessment_Scenario_1/blob/main/srv/EmployeeService.cds)
 
 
 
