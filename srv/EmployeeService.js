@@ -32,9 +32,14 @@ module.exports = cds.service.impl(function(){
         if( req.data.nameFirst || req.data.loginName ) req.reject({message: "Operation not allowed"});
     })
 
-    this.on('UPDATE', EmployeeSet, (req) => {
-        console.log("Update operation successful");
-        // return {"message: Create operation successful"}
+    
+    // this.on('UPDATE', EmployeeSet, (req) => {
+    //     console.log("Update operation successful");
+    //     // return {"message: Create operation successful"}
+    // })
+
+    this.after('UPDATE', EmployeeSet, (req) => {
+        console.log('Update operation successful')
     })
 
     //DELETE VALIDATION

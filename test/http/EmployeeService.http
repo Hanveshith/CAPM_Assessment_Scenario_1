@@ -33,8 +33,8 @@ Authorization: Basic {{username}}:{{password}}
   "nameInitials": "nameInitials-2553083",
   "Gender": "M",
   "Language": "83",
-  "phoneNumber": "phoneNumber-2553083",
-  "Email": "Email-2553083",
+  "phoneNumber": "2553083232",
+  "Email": "2553083@gmail.com",
   "loginName": "Name-2553083",
   "Currency": {
     "code": "USD"
@@ -47,7 +47,7 @@ Authorization: Basic {{username}}:{{password}}
 
 
 ### EmployeeSet Update
-PATCH {{server}}/odata/v4/employee/EmployeeSet/25530838-6a37-4214-8428-3a80e44635a2
+PATCH {{server}}/odata/v4/employee/EmployeeSet/6f0c7e17-e628-41a0-9574-59b84e4769d4
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -56,9 +56,9 @@ Authorization: Basic {{username}}:{{password}}
   "nameLast": "nameLast-2553083",
   "nameInitials": "nameInitials-2553083",
   "Gender": "M",
-  "Language": "83",
-  "phoneNumber": "phoneNumber-2553083",
-  "Email": "Email-2553083",
+  "Language": "87",
+  "phoneNumber": "2553083123",
+  "Email": "2553083@gmail.com",
   "Currency": {
     "code": "215"
   },
